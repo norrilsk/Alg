@@ -22,11 +22,11 @@
 *       complexity: O(lg(N))
 *
 */
+#ifndef _ALG_BIN_HEAP
+#define _AlG_BIN_HEAP
 #include <memory>
 #include <exception>
 #include <stdexcept>
-#ifndef _ALG_BIN_HEAP
-#define _AlG_BIN_HEAP
 
 namespace alg {
     template <typename T> class Bheap;
