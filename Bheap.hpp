@@ -25,6 +25,8 @@
 #include <memory>
 #include <exception>
 #include <stdexcept>
+#ifndef _ALG_BIN_HEAP
+#define _AlG_BIN_HEAP
 
 namespace alg {
     template <typename T> class Bheap;
@@ -51,7 +53,7 @@ namespace alg {
     class Bheap {
         using NodePtr = std::shared_ptr<BheapNode<T>>;
         NodePtr head;
-        std::allocator<int> alloc;
+        std::allocator<T> alloc;
         size_t _size = 0;
 
         inline void link_nodes (NodePtr &y,
@@ -204,3 +206,4 @@ namespace alg {
         };
     };
 }
+#endif // _ALG_BIN_HEAP
